@@ -64,7 +64,8 @@ class FormsTest(TestCase):
         with self.assertRaisesMessage(
                 ValidationError,
                 expected_message=(
-                        "Oops! This deadline is not realistic. Try picking another time."
+                        "Oops! This deadline is not realistic. "
+                        "Try picking another time."
                 )
         ):
             validate_deadline(timezone.now())

@@ -16,5 +16,5 @@ class Task(models.Model):
     tags = models.ManyToManyField(Tag, related_name="tasks")
 
     def __str__(self):
-        return f"{self.content} (Tags: {[tag.name for tag in self.tags.all()]})"
-
+        return (f"{self.content} "
+                f"(Tags: {[tag.name for tag in self.tags.all()]})")
