@@ -9,7 +9,6 @@ from todo.models import Task, Tag
 class TaskListView(generic.ListView):
     model = Task
     queryset = Task.objects.prefetch_related("tags")
-    ordering = ["is_completed", "-created_at"]
 
 
 class TaskCreateView(generic.CreateView):
